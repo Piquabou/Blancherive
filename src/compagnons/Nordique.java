@@ -22,4 +22,14 @@ public class Nordique {
 		return "Le nordique " + nom + " : ";
 	}
 
+	@Override
+	public String toString() {
+		return nom;
+	}
+
+	public static void main(String[] args) {
+		Nordique geralt = new Nordique ("Geralt", 8);
+		System.out.println(geralt);
+		
+	}
 }
