@@ -26,10 +26,19 @@ public class Nordique {
 	public String toString() {
 		return nom;
 	}
+	
+	public void frapper(Thalmor thalmor) {
+		String nomThalmor = thalmor.getNom();
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + nomThalmor);
+		int forceCoup = force / 3;
+		thalmor.recevoirCoup(forceCoup);
+	}
 
 	public static void main(String[] args) {
 		Nordique geralt = new Nordique ("Geralt", 8);
 		System.out.println(geralt);
 		
 	}
+	
+	
 }
