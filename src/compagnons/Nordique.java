@@ -3,8 +3,9 @@ package compagnons;
 public class Nordique {
 	private String nom;
 	private int force;
+	private int effetPotion = 1;
 
-	public Nordique(String nom, int force) {
+	public Nordique(String nom, int force, int effetPotion) {
 		this.nom = nom;
 		this.force = force;
 	}
@@ -20,6 +21,10 @@ public class Nordique {
 
 	private String prendreParole() {
 		return "Le nordique " + nom + " : ";
+	}
+	
+	public void boirePotion(int forcePotion) {
+		
 	}
 
 	@Override
