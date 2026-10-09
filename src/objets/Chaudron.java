@@ -24,7 +24,7 @@ public class Chaudron {
 		this.forcePotion = forcePotion;
 	}
 	
-	private boolean resterPotion() {
+	public boolean resterPotion() {
 		return quantitePotion !=0;
 	}
 	

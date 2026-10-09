@@ -30,9 +30,18 @@ public class Alchimiste {
 	}
 	
 	public void booster(Nordique Nordique) {
-		
+		boolean contientPotion = chaudron.resterPotion();
+		String nomNordique = nordique.getNom;
+		if (contientPotion) {
+			if (nomNordique.equals("Ulfberth")) {
+				
+		} else {
+		}
+			
+		}
+		                 
 	}
 		
-	}
-
 }
+
+
