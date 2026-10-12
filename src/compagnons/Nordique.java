@@ -5,7 +5,7 @@ public class Nordique {
 	private int force;
 	private int effetPotion = 1;
 
-	public Nordique(String nom, int force, int effetPotion) {
+	public Nordique(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
 	}
@@ -24,7 +24,7 @@ public class Nordique {
 	}
 	
 	public void boirePotion(int forcePotion) {
-		
+		effetPotion = forcePotion;
 	}
 
 	@Override
@@ -35,8 +35,12 @@ public class Nordique {
 	public void frapper(Thalmor thalmor) {
 		String nomThalmor = thalmor.getNom();
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + nomThalmor);
-		int forceCoup = force / 3;
+		int forceCoup = (force * effetPotion) / 3;
 		thalmor.recevoirCoup(forceCoup);
+		
+		if (effetPotion > 1) {
+			effetPotion--;
+		}
 	}
 
 	public static void main(String[] args) {

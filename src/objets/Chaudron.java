@@ -1,6 +1,5 @@
 package objets;
 
-import com.sun.org.apache.xpath.internal.axes.SelfIteratorNoPredicate;
 
 public class Chaudron {
 	private int quantitePotion;
@@ -29,6 +28,14 @@ public class Chaudron {
 	}
 	
 	public int prendreLouche() {
+		int forceLouche = forcePotion;
+		quantitePotion--;
+		
+		if (quantitePotion == 0) {
+			forcePotion = 0;
+		}
+		
+		return forceLouche;
 	}
 }
 
