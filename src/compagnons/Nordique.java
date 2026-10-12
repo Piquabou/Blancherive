@@ -1,9 +1,12 @@
 package compagnons;
 
+import village_nordique.Village;
+
 public class Nordique {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+	private Village village;
 
 	public Nordique(String nom, int force) {
 		this.nom = nom;
@@ -25,6 +28,14 @@ public class Nordique {
 	
 	public void boirePotion(int forcePotion) {
 		effetPotion = forcePotion;
+	}
+	
+	public void setVillage(Village village) {
+		this.village = village;
+	}
+	
+	public void sePresenter() {
+		
 	}
 
 	@Override
