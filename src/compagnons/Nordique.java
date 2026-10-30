@@ -35,7 +35,13 @@ public class Nordique {
 	}
 	
 	public void sePresenter() {
-		
+		if (village == null) {
+			parler("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+		} else if (village.getChef() == this) {
+			parler("Bonjour, je m'appelle " + nom + ". Je suis le chef du village : " + village.getNom() + ".");
+		} else {
+			parler("Bonjour, je m'appelle " + nom + ". J'habite le village : " + village.getNom() + "."); 
+		}
 	}
 
 	@Override
