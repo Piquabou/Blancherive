@@ -7,6 +7,8 @@ public class Thalmor {
 	public Thalmor(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
+		
+		assert isInvariantVerified();
 	}
 
 	public String getNom() {
@@ -23,6 +25,8 @@ public class Thalmor {
 	}
 
 	public void recevoirCoup(int forceCoup) {
+		assert forceCoup > 0;
+		int ancienneForce = force;
 		force = force - forceCoup;
 		
 		if (force < 1) {
@@ -32,5 +36,17 @@ public class Thalmor {
 			parler("Aïe");
 		}
 		
+		assert isInvariantVerified();
+		assert force < ancienneForce;
+		
 	}
+	
+	private boolean isInvariantVerified() {
+		return force >= 0;
+	}
+	
+	public static void main(String[] args) {
+		Thalmor malborn = new Thalmor("Malborn", 6);
+	}
+	
 }
